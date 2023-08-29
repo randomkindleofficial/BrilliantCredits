@@ -107,7 +107,7 @@ router.post('/new', async (req, res) => {
     const total = Number(req.body.scoreInput0)
     const ver = req.body.verification
     if (ver == 'on' && score && total && url) {
-        if (((score / total) <= 0) && (url.hostname === 'classes.brilliantpala.org' && url.pathname.startsWith('/exams/review/'))) {
+        if (((score / total) >= 0) && (url.hostname === 'classes.brilliantpala.org' && url.pathname.startsWith('/exams/review/'))) {
             console.log((score / total) <= 1);
             const id = Number(url.pathname.split('/')[3]);
             const credit = score / total
