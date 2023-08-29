@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+
+  <title>Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4006cd86d8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="/dashboard" class="=nav-link"><i class="bx bx-home"></i> Dashboard</a></li>
+
+          <li><a href="/report" class="=nav-link"><i class="bx bx-file"></i> Report</a></li>
+          <li><a href="/logout" onclick="localStorage.clear()" class="=nav-link"><i class="bx bx-log-out"></i>
+              Logout</a></li>
+
+
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" style="background: url('/img/hero-bg.png') top center/cover;"
+    class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <form class="ms-5 p-5" style="background-color: rgba(255, 255, 255, 0.5)" action="/new" method="post">
+        <div class="mb-3">
+          <input type="url" class="form-control" placeholder="https://classes.brilliantpala.org/exams/review/<>/basic/" id="urlInput" name="urlInput" required>
+        </div>
+
+        <div class="mb-3 row g-3 align-items-center">
+
+          <div class="col-auto">
+            <input type="number" id="scoreInput" name="scoreInput" class="form-control" placeholder="Score" value="0"
+              onchange="percent()" required>
+          </div>
+          <div class="col-auto">
+            <input type="number" id="scoreInput0" name="scoreInput0" class="form-control" placeholder="Out of"
+              value="120" onchange="percent()" required>
+          </div>
+
+        </div>
+        <hr>
+        <div class="mb-3 row g-3 align-items-center">
+          <div class="col-auto">
+            <input type="number" id="percentage" name="percentage" class="form-control" placeholder="PERCENTAGE"
+              disabled>
+          </div>
+          <div class="col-auto">
+            <input type="number" id="point" name="point" class="form-control" placeholder="POINT" disabled>
+          </div>
+          <div class="col-auto">
+            <input type="currency" id="dollar" name="dollar" class="form-control" placeholder="₹" disabled>
+          </div>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="verification" name="verification" required>
+          <label style="width:600px; overflow: hidden;" class="form-check-label" for="verification">Upon careful review
+            and verification, I can confirm
+            that
+            the exam URL and entered scores are accurate to the best of my knowledge.</label>
+        </div>
+        <button type="submit" class="btn btn-outline-dark">Save</button>
+        {{#if message}}
+                <p class="error form-check-label text-black">{{message}}</p>
+        {{/if}}
+      </form>
+    </div>
+  </section><!-- End Hero -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/typed.js/typed.umd.js"></script>
+  <script src="vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script>
+    function percent() {
+      const score = Number(document.getElementById("scoreInput").value)
+      const total = Number(document.getElementById("scoreInput0").value)
+      const percentage = score*5/6
+      const point = percentage-90
+      const dollar = point*10
+      document.getElementById("percentage").value = percentage
+      document.getElementById("point").value = point
+      document.getElementById("dollar").value = `₹${dollar}`
+    }
+  </script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

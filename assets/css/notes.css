@@ -1,0 +1,210 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 60px;
+  }
+
+  .home-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  body {
+    background-color: #222;
+    color: #fff;
+    font-family: sans-serif;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #222;
+    border-radius: 2px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  .note-container {
+    background-color: #333333;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  .note-content {
+    position: relative;
+  }
+
+  .pin-button {
+    width: 25px;
+    height: 25px;
+    background-color: #dddddd;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .note-divider {
+    height: 1px;
+    background-color: #dddddd;
+    margin: 8px 0;
+  }
+
+  .note-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .note-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .note-header-divider {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #dddddd;
+  }
+
+  .note-description {
+    margin-top: 10px;
+    overflow: scroll
+  }
+
+  .notranslate.note-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+
+
+  .notranslate.note-text a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .note-description-divider {
+    height: 1px;
+    background-color: #dddddd;
+    margin: 12px 0;
+  }
+
+  .note-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .control-button-group {
+    display: flex;
+  }
+
+  .control-button {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .control-icon {
+    width: 16px;
+    height: 16px;
+    background-color: #dddddd;
+    margin-right: 4px;
+  }
+
+  .control-label {
+    font-size: 14px;
+  }
+
+  .remove-button {
+    margin-left: 8px;
+  }
+
+  .note-timestamp {
+    font-size: 12px;
+    color: #888888;
+  }
+
+  .note-placeholder {
+    display: none;
+  }
+
+  .note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  .control-button.close-button {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .toolbar {
+    display: flex;
+  }
+
+  .note-bottom-bar {
+    height: 1px;
+    background-color: #dddddd;
+    margin-top: 12px;
+  }
+
+  .note-text {
+    text-align: left;
+    left: 0;
+    text-indent: 0;
+  }
+  .diary-text {
+    text-align: left;
+    left: 0;
+    text-indent: 0;
+  }
